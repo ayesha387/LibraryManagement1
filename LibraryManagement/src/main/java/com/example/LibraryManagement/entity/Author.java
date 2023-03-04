@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Author {
 @Id
 @Column(name = "author_id")
-    private Long id;
+    private Long authorId;
 @Column(name = "name")
     private String name;
     @Column(name = "email_id")

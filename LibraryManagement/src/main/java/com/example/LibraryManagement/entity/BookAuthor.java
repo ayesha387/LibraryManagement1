@@ -15,6 +15,4 @@ public class BookAuthor {
 @Column(name = "book_id")
     private Long bookId;
 
-
-
 }

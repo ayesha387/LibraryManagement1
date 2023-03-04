@@ -29,6 +29,9 @@ private int price;
 private LocalDateTime returnDate;
 @Column(name = "dueDate")
 private LocalDateTime dueDate;
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 
 
 }
