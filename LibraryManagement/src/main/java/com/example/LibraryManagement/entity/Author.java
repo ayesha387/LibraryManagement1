@@ -1,7 +1,6 @@
 package com.example.LibraryManagement.entity;
 
 import jakarta.persistence.*;
-
 @Entity
 @Table(name = "Author")
 public class Author {

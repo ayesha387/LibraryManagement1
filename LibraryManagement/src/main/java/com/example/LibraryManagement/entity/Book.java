@@ -2,14 +2,12 @@ package com.example.LibraryManagement.entity;
 
 import jakarta.persistence.*;
 
-
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
 @Table(name="book")
 public class Book {
-
 @Id
 @Column(name = "book_id")
     private Long id;
@@ -32,6 +30,11 @@ private LocalDateTime dueDate;
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
-
+    @OneToOne
+    @JoinColumn(name = "shelf_id")
+    private Shelf shelf;
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
 
 }
