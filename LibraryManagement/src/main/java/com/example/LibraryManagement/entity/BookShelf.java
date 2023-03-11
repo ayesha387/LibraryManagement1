@@ -13,4 +13,11 @@ public class BookShelf {
 //    private List<Book> book;
 
 
+    public Long getShelfId() {
+        return shelfId;
+    }
+
+    public void setShelfId(Long shelfId) {
+        this.shelfId = shelfId;
+    }
 }
