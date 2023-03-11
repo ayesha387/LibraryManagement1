@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Table(name="book")
 public class Book {
 @Id
+
 @Column(name = "book_id")
     private Long id;
 

@@ -16,7 +16,6 @@ public class Author {
     @Column(name = "address")
     private String address;
 
-
     public Long getAuthorId() {
         return authorId;
     }

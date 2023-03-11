@@ -6,12 +6,16 @@ import jakarta.persistence.*;
 @Table(name = "IssueBook")
 public class IssueBook {
     @Id
+
     @Column(name = "issueBook_id")
     private Long id;
-
     @OneToOne
     @JoinColumn(name = "member")
     private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "IssueBook")
+    private IssueBook issueBook;
 
     public Long getId() {
         return id;
@@ -27,6 +31,14 @@ public class IssueBook {
 
     public void setMember(Member member) {
         this.member = member;
+    }
+
+    public IssueBook getIssueBook() {
+        return issueBook;
+    }
+
+    public void setIssueBook(IssueBook issueBook) {
+        this.issueBook = issueBook;
     }
 
     //    private Book book;

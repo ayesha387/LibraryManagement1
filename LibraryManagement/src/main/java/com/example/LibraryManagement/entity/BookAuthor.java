@@ -8,6 +8,7 @@ import java.util.Set;
 @Table(name = "BookAuthor")
 public class BookAuthor {
 @Id
+
 @Column(name = "bookAuthor_id")
     private Long id;
 //@Column(name = "bookAuthor")

@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "category")
 public class Category {
 @Id
+
     private long id;
     private String name;
     @ManyToOne

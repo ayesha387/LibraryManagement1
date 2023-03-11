@@ -21,9 +21,6 @@ public class Member {
 //    private Set<Book> book;
 @Column(name = "join_Date")
     private LocalDateTime joinDate;
-@ManyToOne
-@JoinColumn(name = "IssueBook")
-    private IssueBook issueBook;
 
     public Long getId() {
         return id;
@@ -71,13 +68,5 @@ public class Member {
 
     public void setJoinDate(LocalDateTime joinDate) {
         this.joinDate = joinDate;
-    }
-
-    public IssueBook getIssueBook() {
-        return issueBook;
-    }
-
-    public void setIssueBook(IssueBook issueBook) {
-        this.issueBook = issueBook;
     }
 }

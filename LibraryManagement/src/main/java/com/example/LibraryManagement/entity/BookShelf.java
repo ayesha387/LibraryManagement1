@@ -7,6 +7,7 @@ import java.util.List;
 @Table(name = "BookShelf")
 public class BookShelf {
 @Id
+
 @Column(name = "shelf_id")
     private Long shelfId;
 
