@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Table(name = "Author")
 public class Author {
 @Id
+@GeneratedValue
 @Column(name = "author_id")
     private Long authorId;
 @Column(name = "name")
