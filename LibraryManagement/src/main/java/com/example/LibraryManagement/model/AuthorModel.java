@@ -7,13 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class AuthorModel {
-
     private String name;
-
     private String email;
-
     private String phoneNo;
-
     private String address;
 
     public Author disassemble() {
