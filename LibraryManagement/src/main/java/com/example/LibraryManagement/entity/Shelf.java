@@ -8,6 +8,7 @@ import java.util.List;
 @Table(name = "Shelf")
 public class Shelf {
 @Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "shelf_id")
     private Long id;
 @Column(name = "name")

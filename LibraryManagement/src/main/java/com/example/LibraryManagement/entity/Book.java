@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name="book")
 public class Book {
 @Id
-
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "book_id")
     private Long id;
 
@@ -19,9 +19,10 @@ private String category;
 private String edition;
 @Column(name = "price")
 private int price;
-    @OneToOne
-    @JoinColumn(name = "shelf_id")
-    private Shelf shelf;
+
+    @ManyToOne
+    @JoinColumn(name = "bookshelf_id")
+    private BookShelf bookShelf;
 
     public Long getId() {
         return id;

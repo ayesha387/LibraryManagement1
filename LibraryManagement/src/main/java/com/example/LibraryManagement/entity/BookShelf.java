@@ -7,8 +7,8 @@ import java.util.List;
 @Table(name = "BookShelf")
 public class BookShelf {
 @Id
-
-@Column(name = "shelf_id")
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "bookshelf_id")
     private Long shelfId;
 
 //    private List<Book> book;
