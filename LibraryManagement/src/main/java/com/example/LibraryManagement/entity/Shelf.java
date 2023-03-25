@@ -14,9 +14,13 @@ public class Shelf {
 @Column(name = "name")
     private String name;
 
-    @OneToMany
-    @JoinColumn(name="shelf_id")
-    private List<Book> books;
+@ManyToOne
+@JoinColumn(name = "book_id")
+private Book book;
+
+//    @OneToMany
+//    @JoinColumn(name="shelf_id")
+//    private List<Book> books;
 
     public Long getId() {
         return id;
@@ -34,11 +38,11 @@ public class Shelf {
         this.name = name;
     }
 
-    public List<Book> getBooks() {
-        return books;
-    }
+//    public List<Book> getBooks() {
+//        return books;
+//    }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
+//    public void setBooks(List<Book> books) {
+//        this.books = books;
+//    }
 }

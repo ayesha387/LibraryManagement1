@@ -17,6 +17,11 @@ public class Author {
     @Column(name = "address")
     private String address;
 
+    @OneToMany
+    @JoinColumn(name = "book_id")
+    private Book book;
+
+
     public Long getAuthorId() {
         return authorId;
     }

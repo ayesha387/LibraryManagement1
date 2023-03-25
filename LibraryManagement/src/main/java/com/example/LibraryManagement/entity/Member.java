@@ -7,9 +7,10 @@ import java.util.Set;
 @Table(name = "member")
 public class Member {
 @Id
-@Column(name = "member_id")
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id")
     private Long id;
-@Column(name = "name_id")
+@Column(name = "name``")
  private String name;
 @Column(name = "phone_No")
     private String phoneNo;
@@ -22,6 +23,9 @@ public class Member {
 @Column(name = "join_Date")
     private LocalDateTime joinDate;
 
+@ManyToOne
+@JoinColumn(name = "issueBook_id")
+private Book book;
     public Long getId() {
         return id;
     }

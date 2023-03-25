@@ -11,7 +11,10 @@ public class BookShelf {
 @Column(name = "bookshelf_id")
     private Long shelfId;
 
-//    private List<Book> book;
+@OneToMany
+@JoinColumn(name = "book_id")
+private Book book;
+//    private List<Book> books;
 
 
     public Long getShelfId() {

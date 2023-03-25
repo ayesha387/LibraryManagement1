@@ -64,11 +64,11 @@ private int price;
         this.price = price;
     }
 
-    public Shelf getShelf() {
-        return shelf;
-    }
+//    public Shelf getShelf() {
+//        return shelf;
+//    }
 
-    public void setShelf(Shelf shelf) {
-        this.shelf = shelf;
-    }
+//    public void setShelf(Shelf shelf) {
+//        this.shelf = shelf;
+//    }
 }

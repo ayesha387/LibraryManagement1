@@ -2,6 +2,8 @@ package com.example.LibraryManagement.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "category")
 public class Category {
@@ -9,9 +11,9 @@ public class Category {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "book")
-    private Book book;
+    @OneToMany
+    @JoinColumn(name = "book_id")
+    private List<Book> books;
 
     public long getId() {
         return id;
